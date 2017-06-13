@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-size: cover;
+	/* The image used */
+	/* background: url(../images/wood-background-4.jpg) no-repeat center center fixed; */
+    background: url(../images/website-background-images.jpg) no-repeat center center fixed transparent;
+	/* background: url(../images/bodyBackGround.jpg) no-repeat center center fixed transparent; */
+    /* Center and scale the image nicely */
+    /*background-position: center center;
+    background-repeat: no-repeat; */
+    background-size: cover;
+	z-index: 1;
+	color: white;
+}
+
+.menu {
+	height: 100px;
+	/* background-color: #B2D6FF;    /* Medium blue */
+	width: 100%;
+}
+
+.sidebarLeft {
+	/*margin-top: 100px; */
+	float: left;
+	width: 200px;
+	height: auto;
+/*	background-color: #F09A9D;    /* Red */
+}
+
+.sidebarRight {
+	/* margin-top: 100px; */
+	float: right;
+	width: 200px;
+	height: auto;
+/*	background-color: gray;    /* Red */
+}
+
+.content {
+	margin-left:200px;
+	margin-right: 200px;
+	height: auto;
+/*	background-color: #F5CF8E;    /* Yellow */
+	float: both;
+}
+
+.footer {
+  height: 20px;
+  background-color: #D6E9FE;    /* Light blue */
+}
+
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
