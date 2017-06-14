@@ -28,7 +28,7 @@
      *This value WILL HAVE to change to a very strong and secure password on a production server that is
      * available to everyone on the web.
     */
-    define('DB_PASS', 'Mw50Man0F');
+    define('DB_PASS', 'Mw50M@n0FPgwsl!');
     
     /*Defining the connection string that will be requiered by the PDO connection that will make the
      * connection to the database.  Noting in this line will ever have to chance as long as the

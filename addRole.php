@@ -1,11 +1,29 @@
 <?php
+
+    // ini_set('display_errors', 1);
+    // error_reporting(E_ALL);
+	ini_set('display_errors', 0);
+    error_reporting(0);
 	require_once 'functions/functions.php';
 	$companyName = 'Wilkim Trucking Ltd';
 	$pageTitle = 'Add New Role';
+	$UID = 1;
 	
-//	if($_POST){
-//		var_dump($_POST);
-//	}
+	if(!empty($_POST)){
+		$shortTitle = $_POST['shortTitle'];
+		$longTitle = $_POST['longTitle'];
+		$roleDescription = $_POST['jobDescription'];
+		$roleResponsibilities = $_POST['jobResponsibilities'];
+		$roleRequirements = $_POST['jobRequirements'];
+		$UID = $_POST['uid'];
+		$roleAdded = addNewRole($shortTitle, $longTitle, $roleDescription, $roleResponsibilities, $roleRequirements, $UID);
+		
+//		if($roleAdded === true){
+//			echo "New role added successfully";
+//		} elseif ($roleAdded === false){
+//			echo "There was an error adding the new role";
+//		}
+	}
 	
 ?>
 
@@ -38,7 +56,16 @@
 					<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h3 class="panel-title">Add New Role</h3>						
+								<h3 class="panel-title">Add New Role</h3>
+								<?php
+								
+									if($roleAdded === true){
+										echo "New role added successfully";
+									} elseif ($roleAdded === false){
+										echo "There was an error adding the new role";
+									}								
+			
+								?>
 							</div>
 							<div class="panel-body">
 								<form role="form" method="post" action="">				
@@ -72,6 +99,7 @@
 									<div class="form-group">
 										<span class="label label-warning">Warning Label</span>
 									</div>
+									<input type="hidden" name="uid" id="uid" value="<?php echo $UID; ?>" />
 									<input type="submit" value="Add Role" class="btn btn-info btn-block" /> 
 								</form>
 							</div>
